@@ -5,6 +5,7 @@ export default async function getWeatherData(location, scale) {
   const unitSystem = scale === 'C' ? 'metric' : 'us';
   const url = constructApiUrl(location, unitSystem);
   const response = await fetch(url, { mode: 'cors' });
+  if (response.status !== 200) return response.status;
   const data = await response.json();
   return formatWeatherData(data);
 }

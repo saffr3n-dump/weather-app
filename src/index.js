@@ -18,4 +18,10 @@ scaleSwitchBtn.onclick = function () {
   updateDom(location, scale);
 };
 
+const modal = document.querySelector('dialog');
+const modalCloseBtn = modal.querySelector('button');
+modalCloseBtn.onclick = function () {
+  modal.close();
+};
+
 updateDom(location, scale);

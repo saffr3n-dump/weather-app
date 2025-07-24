@@ -19,12 +19,15 @@ body {
 }
 
 button {
-  border: none;
-  padding: 0;
   font-family: inherit;
   font-size: inherit;
-  color: inherit;
+}
+
+header button {
+  border: none;
+  padding: 0;
   background-color: inherit;
+  color: inherit;
 
   & svg {
     display: block;
@@ -94,5 +97,28 @@ main {
   & .temp .real {
     font-size: 1.5rem;
     margin-bottom: 0.2rem;
+  }
+}
+
+dialog {
+  background-color: inherit;
+  color: inherit;
+  text-align: center;
+  border: 0.1rem solid #44a;
+
+  &::backdrop {
+    background-color: #0008;
+  }
+
+  & button {
+    background-color: #113;
+    border: 0.1rem solid #44a;
+    color: inherit;
+    font-weight: bold;
+    padding: 0.1rem 3rem;
+
+    &:hover {
+      background-color: #225;
+    }
   }
 }
