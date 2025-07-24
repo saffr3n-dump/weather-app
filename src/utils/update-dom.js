@@ -15,7 +15,7 @@ export default async function updateDom(location, scale) {
 
   scaleEls.forEach((el) => (el.textContent = scale));
   addressEl.textContent = data.address;
-  addressEl.after(icon);
+  conditionEl.after(icon);
   conditionEl.textContent = data.condition;
   realTempValueEl.textContent = data.realTemp;
   feelTempValueEl.textContent = data.feelTemp;
