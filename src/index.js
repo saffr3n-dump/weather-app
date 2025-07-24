@@ -12,4 +12,10 @@ searchForm.onsubmit = function (e) {
   updateDom(location, scale);
 };
 
+const scaleSwitchBtn = document.querySelector('.temp-switch');
+scaleSwitchBtn.onclick = function () {
+  scale = scale === 'C' ? 'F' : 'C';
+  updateDom(location, scale);
+};
+
 updateDom(location, scale);
